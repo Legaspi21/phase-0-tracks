@@ -1,0 +1,53 @@
+- Maneuver into elevator
+- Move forward until wall is reached
+- Turn 180 degrees
+    - If keypad is to the left of door
+        - Move left
+    - If keypad is to the right of door
+        - Move right
+- Move forward to approach keypad
+- Observe numbers on keypad
+- Ask "What floor would you like?"
+    - Until number equals floor
+        - Press nothing
+- Press the number that corresponds with floor choice
+- Wait until elevator stops and doors open
+- Exit elevator
+
+Making coffee
+
+- Enter kitchen
+- Locate water kettle
+    - If water kettle empty
+        - Fill water kettle 3/4 full of water
+    - If water kettle is not empty and is not 3/4 full
+        - Fill remaining until 3/4 full is true
+- Place water kettle on stove top 
+- Turn stove top that corresponds with location of kettle on to medium heat (3/4 maximum level)
+- Wait 15 minutes or until water kettle makes loud sound
+- Turn off stove
+- Locate French press
+- Place French press on counter top away from stove
+- Remove top of French press and set to the side
+- Locate ground coffee
+    - If coffee bean is whole and not ground
+        - Locate coffee grinder
+        - Pour coffee beans into grinder until grinder half full is true
+        - Turn the dial to coarse setting
+        - Grind coffee for 15 seconds
+- Pour 1/2 cup of ground coffee into French press
+- Pour hot water from water kettle into French press until 3/4 full
+- Wait 60 seconds
+- Locate top of French press
+- Insert slowly in French press
+- Locate coffee mug
+- Pour coffee into mug until 3/4 full
+- Open refrigerator
+- Locate soy creamer
+- Add 3 table spoons of soy creamer into coffee mug
+- Open pantry
+- Locate sugar
+- Add 3 table spoons of sugar into coffee mug
+- Stir coffee for 5 seconds
+- Coffee is now ready to be consumed
+
