@@ -1,3 +1,50 @@
 body {
-	background-color: red;
+  margin:0;
+  padding:0;
+  background-color:orange;
+  opacity: .6;
+  font-family: Futura;
 }
+h1 {
+  letter-spacing: 14px;
+  text-align: center;
+}
+
+.column-1{
+  background-color:purple;
+  color:white;
+  float: left;
+  width: 40%;
+  margin:10px;
+  padding: 5px;
+  
+  }
+  .column-1 h2 {
+    color:blue;
+  }
+
+.column-2 {
+  float: left;
+  width: 40%;
+  margin:10px;
+  background-color: yellow;
+  color: green;
+  padding: 5px;
+}
+
+footer {
+  clear:both;
+  padding-top:20px;
+  background-color: salmon;
+  color; red;
+  padding: 5px;
+  letter-spacing: 14px;
+  text-align: center;
+}
+header,footer {
+  background-color: blue;
+}
+a:hover{
+  color: red;
+}
+
