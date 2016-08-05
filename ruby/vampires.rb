@@ -1,3 +1,8 @@
+puts "How many employees will be processed?"
+apps_to_process = gets.chomp.to_i
+until apps_to_process == 0
+
+def werewolf_quiz
 puts "What is your name?"
 user_name = gets.chomp.downcase
 puts "How old are you?"
@@ -16,6 +21,8 @@ garlic = true if garlic_bread == "yes"
 health = true if health_insurance == "yes"
 
 
+
+
 if age && garlic || health
 	puts "Probably not a vampire."
 elsif !age && !garlic && health
@@ -28,3 +35,8 @@ else
 	puts "Results inconclusive"
 end
 
+p user_name, user_age, year_of_birth, garlic_bread, health_insurance
+end
+  werewolf_quiz
+  apps_to_process = apps_to_process - 1
+end
