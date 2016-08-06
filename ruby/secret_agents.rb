@@ -26,3 +26,24 @@ end
 p string
 end
 encrypt("abc")
+
+#A decrypt method that reverses the process above. Note that Ruby doesn't
+#have a built-in method for going backward one letter. How can you find 
+#out where a letter is in the alphabet, then access the letter right before it?
+#Hint: In the IRB session above, you learned how to ask a string for the index of a letter.
+#"abcdefghijklmnopqrstuvwxyz" counts as a string.
+
+#Establish a string variable (alpha) with the value of "abcdefghijklmnopqrstuvwxyz"
+def decrypt (encrypted_string)
+	i = 0
+	while i < encrypted_string.length
+	encrypted_string[i]
+	num = "abcdefghijklmnopqrstuvwxyz".index encrypted_string[i]
+	num2 = num -1
+	num3 = "abcdefghijklmnopqrstuvwxyz"[num2]
+	puts num3
+	i += 1
+	end
+end
+
+decrypt("qbttxpse")
