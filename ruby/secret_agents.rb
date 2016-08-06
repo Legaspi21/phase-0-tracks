@@ -53,3 +53,7 @@ end
 decrypt("abc")      #zab
 decrypt("afe")      #zed
 decrypt("qbttxpse") #password
+
+#Release 4
+decrypt(encrypt("swordfish")) #swordfish
+#What is happening here is like function composition in math...  The input of the entire method of decrypt is the output of the encrypt method when it's input is "swordfish".  i.e.  When you pass in swordfish to encrypt, it scrambles it by pushing each letter to the next letter (should print out "txpsegjti); THEN, we use that scrambled string from encrypt ("txpsegjti") as the argument we pass in to decrypt.  Decrypt takes that input and reverses it, i.e. gives us back "swordfish".
