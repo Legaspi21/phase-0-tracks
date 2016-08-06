@@ -21,8 +21,8 @@ def encrypt (string)
   end
 p string
 end
-encrypt("abc")
-encrypt("zed")
+#encrypt("abc")
+#encrypt("zed")
 
 #Decrypt Method
 #Adds decrypt method with argument encrypted_string
@@ -50,10 +50,35 @@ def decrypt(encrypted_string)
   end
 p encrypted_string
 end
-decrypt("abc")      #zab
-decrypt("afe")      #zed
-decrypt("qbttxpse") #password
+#decrypt("abc")      #zab
+#decrypt("afe")      #zed
+#decrypt("qbttxpse") #password
 
 #Release 4
-decrypt(encrypt("swordfish")) #swordfish
+#decrypt(encrypt("swordfish")) #swordfish
 #What is happening here is like function composition in math...  The input of the entire method of decrypt is the output of the encrypt method when it's input is "swordfish".  i.e.  When you pass in swordfish to encrypt, it scrambles it by pushing each letter to the next letter (should print out "txpsegjti); THEN, we use that scrambled string from encrypt ("txpsegjti") as the argument we pass in to decrypt.  Decrypt takes that input and reverses it, i.e. gives us back "swordfish".
+
+#Release 5(lines 61-119)
+#Pseudo/driver code for interface
+#Using [puts] ask the user whether they would like to decrypt or encrypt a password
+puts "Would you like to encrypt or decrypt a password?"
+#Using [gets.chomp.downcase] collect the users input in a variable [agent_input], in lower case letters to avoid any confusion
+agent_input = gets.chomp.downcase
+#Set up until loop to catch mistyped words
+until agent_input == "encrypt" || agent_input == "decrypt"
+  puts "Please type exactly decrypt or encrypt as this is classified info..."
+  puts "Do you want to encrypt or decrypt a password?"
+  agent_input = gets.chomp.downcase
+end
+#Using [puts] ask the user for the password
+puts "Ok, what is the password?"
+#Store the inputed "password" in the variable [password]
+password = gets.chomp
+#Build an if/else function based on [agent_input]
+#If [agent_input] = encrypt print encrypt (password)
+#elsif [agent_input] = decrypt print decrypt (password)
+if agent_input == "encrypt"
+  encrypt(password)
+else
+  decrypt(password)
+end
