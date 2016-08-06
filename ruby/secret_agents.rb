@@ -59,61 +59,26 @@ end
 #What is happening here is like function composition in math...  The input of the entire method of decrypt is the output of the encrypt method when it's input is "swordfish".  i.e.  When you pass in swordfish to encrypt, it scrambles it by pushing each letter to the next letter (should print out "txpsegjti); THEN, we use that scrambled string from encrypt ("txpsegjti") as the argument we pass in to decrypt.  Decrypt takes that input and reverses it, i.e. gives us back "swordfish".
 
 #Release 5(lines 61-119)
-#Set up puts and gets.chomp to ask for encrypt or decrypt
-#use pref as variable for input
-#run until loop to catch mistyped words
-#exit until loop when words typed exactly
-#after until loop, set up if/else for encrypt or decrypt
-#fun methods using pref as input
-#set pref to be the method input using older variable names
-#print method output to screen
-#end all loops/methods
-
-puts "Do you want to encrypt or decrypt a password?"
-pref = gets.chomp
-pref = pref.downcase
-until pref == "decrypt" || pref == "encrypt"
-    puts "Please type exactly decrypt or encrypt as this is classified info..."
-    puts "Do you want to encrypt or decrypt a password?"
-    pref = gets.chomp
-    pref = pref.downcase
+#Pseudo/driver code for interface
+#Using [puts] ask the user whether they would like to decrypt or encrypt a password
+puts "Would you like to encrypt or decrypt a password?"
+#Using [gets.chomp.downcase] collect the users input in a variable [agent_input], in lower case letters to avoid any confusion
+agent_input = gets.chomp.downcase
+#Set up until loop to catch mistyped words
+until agent_input == "encrypt" || agent_input == "decrypt"
+  puts "Please type exactly decrypt or encrypt as this is classified info..."
+  puts "Do you want to encrypt or decrypt a password?"
+  agent_input = gets.chomp.downcase
 end
-if pref == "encrypt"
-  puts "What password would you like to encrypt?"
-  pass_word = gets.chomp
-  pass_word = pass_word.downcase
-  string = pass_word
-  def encrypt(string)
-    i = 0
-    while i < string.length
-      if string[i] == "z"                 #added edge case conditional
-        string[i] = "a"
-      else
-      string[i] = string[i].next
-      end
-      i += 1
-    end
-  p string
-  end
-  encrypt(string)
-
-
+#Using [puts] ask the user for the password
+puts "Ok, what is the password?"
+#Store the inputed "password" in the variable [password]
+password = gets.chomp
+#Build an if/else function based on [agent_input]
+#If [agent_input] = encrypt print encrypt (password)
+#elsif [agent_input] = decrypt print decrypt (password)
+if agent_input == "encrypt"
+  encrypt(password)
 else
-  puts "What password would you like to decrypt?"
-  pass_word = gets.chomp
-  pass_word = pass_word.downcase
-  encrypted_string = pass_word
-  def decrypt(encrypted_string)
-    i = 0
-    num = "abcdefghijklmnopqrstuvwxyz"
-    while i < encrypted_string.length
-      place = encrypted_string[i]         #place is letter in encrypted_string
-      new_num = num.index(place)          #new_num is the index in num of letter
-      encrypted_string[i] = num[new_num - 1]
-      #p encrypted_string                 #print each new string for test
-      i += 1
-    end
-  p encrypted_string
-  end
-  decrypt(encrypted_string)
+  decrypt(password)
 end
