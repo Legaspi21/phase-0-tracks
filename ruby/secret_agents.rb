@@ -58,35 +58,7 @@ end
 #decrypt(encrypt("swordfish")) #swordfish
 #What is happening here is like function composition in math...  The input of the entire method of decrypt is the output of the encrypt method when it's input is "swordfish".  i.e.  When you pass in swordfish to encrypt, it scrambles it by pushing each letter to the next letter (should print out "txpsegjti); THEN, we use that scrambled string from encrypt ("txpsegjti") as the argument we pass in to decrypt.  Decrypt takes that input and reverses it, i.e. gives us back "swordfish".
 
-<<<<<<< HEAD
-#Release 5(lines 61-85)
-#Set up puts and gets.chomp to ask for encrypt or decrypt
-#use pref as variable for input
-#run until loop to catch mistyped words
-#exit until loop when words typed exactly
-#after until loop, set up if/else for encrypt or decrypt
-#find methods using pref as input
-#set pref to be the method input using older variable names
-#print method output to screen
-#end all loops/methods
-
-puts "Would you like to decrypt or encrypt a password?"
-pref = gets.chomp.downcase
-until pref == "decrypt" || pref == "encrypt"
-    puts "Please type exactly decrypt or encrypt as this is classified info..."
-    puts "Do you want to encrypt or decrypt a password?"
-    pref = gets.chomp.downcase
-end
-puts "Ok, what is the password?"
-password = gets.chomp
-if pref == "encrypt"
-  encrypt (password)
-elsif pref == "decrypt"
-  decrypt (password)
-end
-
-=======
-#Release 5(lines 61-119)
+#Release 5(lines 61-84)
 #Pseudo/driver code for interface
 #Using [puts] ask the user whether they would like to decrypt or encrypt a password
 puts "Would you like to encrypt or decrypt a password?"
@@ -110,4 +82,4 @@ if agent_input == "encrypt"
 else
   decrypt(password)
 end
->>>>>>> 7da1da905c7da1c7a0be7a29a3355b618347ba97
+
