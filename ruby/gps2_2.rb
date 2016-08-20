@@ -83,3 +83,19 @@ print_list(new_list)
 # remove_item("carrots",new_list)
 # update_quantity("potatoes",100,new_list)
 # print_list(new_list)
+
+#Reflection
+# What did you learn about pseudocode from working on this challenge?
+# 	I learned to keep it as simple as possible and that good pseudocode goes a long way when writing code.
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# 	An array works with creating a list of items and a hash is good for giving each item a quantity.
+# What does a method return?
+# 	A method returns the last thing it evaluates unless there is something else that is printed within the method.
+# What kind of things can you pass into methods as arguments?
+# 	You can pass in data structures like a hash or array and also pass in variables that can be strings or integers.
+# How can you pass information between methods?
+# 	By using it as a parameter or argument in the method declaration.
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# 	I think I got a better understanding of passing data structures and manipulating them through methods.
+# 	I learned the importance of good pseudocode and communicating with my pair any weaknesses early on.
+# 	Overall I feel that any confusion I still had regarding these concepts was resolved during the challenge.
