@@ -1,10 +1,10 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Resdan ].
+# We spent [2.5] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# Calls on a class or module from within the same file tree
 #
 require_relative 'state_data'
 
@@ -88,3 +88,14 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# # What are the differences between the two different hash syntaxes shown in the state_data file?
+# The state data hash uses a string as the key and a separate hash for the values for pop density and population.
+# # What does require_relative do? How is it different from require?
+# Require relative requires a file from the same folder or file tree. Require is for built-ins.
+# # What are some ways to iterate through a hash?
+# each and map
+# # When refactoring virus_effects, what stood out to you about the variables, if anything?
+# They were repetitive and did not need to be called as parameters.
+# # What concept did you most solidify in this challenge?
+# Case conditionals.
