@@ -15,6 +15,9 @@ function revStr(str){
 	return newString;
 }
 
-
+var myReversedString = revStr('Reverse this here string please');
+if (1 == 1){
+console.log(myReversedString);
+}
 
 
