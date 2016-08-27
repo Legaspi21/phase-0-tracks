@@ -76,5 +76,23 @@ console.log(longestItem(["Barking Up The Wrong Tree","Knuckle Down","Goody Two-S
 // Release 1 Driver code
 matchingPair({name: "Steven", age: 55}, {name: "Tamir", age: 55});
 matchingPair({name: "Steven", age: 55}, {name: "Tamir", number: 55});
-
-
+//Release 2 Driver code
+// Tried to do all 10 at once but kept infinite looping :(
+		// var x = function getRandomInt(min, max) {
+		// 		  min = Math.ceil(min);
+		// 		  max = Math.floor(max);
+		// 		  return Math.floor(Math.random() * (max - min)) + min;
+		// 		}
+		//  for (i =1; i < 10; i++){
+		//  console.log(longestItem(randomStrAry(x(3,7))));}
+console.log(longestItem(randomStrAry(4)));
+console.log(longestItem(randomStrAry(3)));
+console.log(longestItem(randomStrAry(7)));
+console.log(longestItem(randomStrAry(3)));
+console.log(longestItem(randomStrAry(4)));
+console.log(longestItem(randomStrAry(5)));
+console.log(longestItem(randomStrAry(4)));
+console.log(longestItem(randomStrAry(6)));
+console.log(longestItem(randomStrAry(8)));
+console.log(longestItem(randomStrAry(4)));
+console.log(longestItem(randomStrAry(5)));
