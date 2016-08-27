@@ -16,7 +16,7 @@ Compare items
 print true if there is a matching key value pair
 print false if there is not a match
 */
-
+// Release 0
 function longestItem(array){
 	var length = 0;
 	var item = '';
@@ -53,6 +53,21 @@ function matchingPair(object1,object2){
 
 }
 
+// Release 2
+function randomStrAry(int){
+	var output = []; // holds array
+	var str = ""; // temp string
+	var x = function getRandomInt(min, max) {
+		  min = Math.ceil(min);
+		  max = Math.floor(max);
+		  return Math.floor(Math.random() * (max - min)) + min;
+		}
+	var letters = 'oemslpejfivjkqopdlmcbfghxbwkwkrocjsjka';
+	for (i = 0; i < int; i++) { 
+    output.push(letters.substr(x(1,10),x(1,10)));
+	}
+	return output;
+}
 
 // Release 0 Driver code
 console.log(longestItem(["Britney Spears", "N'Sync", "Backstreet Boys",]));
