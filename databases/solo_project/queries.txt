@@ -73,4 +73,60 @@ Output
 8|Diaz, Cameron|1972-05-19|1
 10|Bonds, Barry|1971-09-10|2
 
+RELEASE 3
 
+Command
+
+SELECT patients.date_of_birth, doctors.name FROM patients INNER JOIN doctors ON patients.doctor_id = doctors.doctor_id;
+
+Output
+
+1986-10-22|Dr. Vivica A. Fox, MD
+1954-02-17|Dr. Michael A. Vanderhauzner, MD
+1942-08-30|Dr. Michael A. Vanderhauzner, MD
+1972-11-27|Dr. Michael A. Vanderhauzner, MD
+1970-4-2|Dr. Vivica A. Fox, MD
+1991-07-02|Dr. Vivica A. Fox, MD
+1949-08-09|Dr. William H. Bonnahue, MD
+1972-05-19|Dr. William H. Bonnahue, MD
+1971-09-10|Dr. Michael A. Vanderhauzner, MD
+
+Command
+
+SELECT patients.name, doctors.name FROM doctors LEFT JOIN patients ON patients.doctor_id = doctors.doctor_id;
+
+Output
+
+Diaz, Cameron|Dr. William H. Bonnahue, MD
+Payne, Max|Dr. William H. Bonnahue, MD
+Bonds, Barry|Dr. Michael A. Vanderhauzner, MD
+Borne, Jason|Dr. Michael A. Vanderhauzner, MD
+Montana, Tony|Dr. Michael A. Vanderhauzner, MD
+Walters, Barbara|Dr. Michael A. Vanderhauzner, MD
+Benjamin, Andre|Dr. Vivica A. Fox, MD
+Lopez, Jennifer|Dr. Vivica A. Fox, MD
+Tiller, Bryson|Dr. Vivica A. Fox, MD
+
+Command 
+
+sqlite> SELECT patients.name, doctors.name FROM patients LEFT JOIN doctors ON patients.doctor_id = doctors.doctor_id;
+
+Output
+
+Benjamin, Andre|Dr. Vivica A. Fox, MD
+Montana, Tony|Dr. Michael A. Vanderhauzner, MD
+Walters, Barbara|Dr. Michael A. Vanderhauzner, MD
+Borne, Jason|Dr. Michael A. Vanderhauzner, MD
+Lopez, Jennifer|Dr. Vivica A. Fox, MD
+Tiller, Bryson|Dr. Vivica A. Fox, MD
+Payne, Max|Dr. William H. Bonnahue, MD
+Diaz, Cameron|Dr. William H. Bonnahue, MD
+Bonds, Barry|Dr. Michael A. Vanderhauzner, MD
+
+Command
+
+SELECT patients.name, doctors.name FROM patients RIGHT JOIN doctors ON patients.doctor_id = doctors.doctor_id;
+
+Output
+
+Error: RIGHT and FULL OUTER JOINs are not currently supported
