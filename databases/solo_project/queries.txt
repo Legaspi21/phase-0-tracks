@@ -1,0 +1,76 @@
+Command
+
+SELECT * FROM patients;
+
+Output
+
+1|Benjamin, Andre|1986-10-22|1
+2|Montana, Tony|1954-02-17|2
+3|Walters, Barbara|1942-08-30|2
+4|Borne, Jason|1972-11-27|2
+5|Lopez, Jennifer|1970-4-2|3
+6|Tiller, Bryson|1991-07-02|3
+7|Payne, Max|1949-08-09|1
+8|Diaz, Cameron|1972-05-19|1
+9|Rich, Richie|1984-01-06|1
+10|Bonds, Barry|1971-09-10|2
+
+Command
+
+UPDATE patients SET doctor_id=3 WHERE name="Benjamin, Andre";
+
+Output
+
+1|Benjamin, Andre|1986-10-22|3
+
+Command
+
+SELECT * FROM patients, doctors WHERE patients.doctor_id = doctors.doctor_id;
+
+Output
+
+1|Benjamin, Andre|1986-10-22|3|3|Dr. Vivica A. Fox, MD|true
+2|Montana, Tony|1954-02-17|2|2|Dr. Michael A. Vanderhauzner, MD|false
+3|Walters, Barbara|1942-08-30|2|2|Dr. Michael A. Vanderhauzner, MD|false
+4|Borne, Jason|1972-11-27|2|2|Dr. Michael A. Vanderhauzner, MD|false
+5|Lopez, Jennifer|1970-4-2|3|3|Dr. Vivica A. Fox, MD|true
+6|Tiller, Bryson|1991-07-02|3|3|Dr. Vivica A. Fox, MD|true
+7|Payne, Max|1949-08-09|1|1|Dr. William H. Bonnahue, MD|false
+8|Diaz, Cameron|1972-05-19|1|1|Dr. William H. Bonnahue, MD|false
+9|Rich, Richie|1984-01-06|1|1|Dr. William H. Bonnahue, MD|false
+10|Bonds, Barry|1971-09-10|2|2|Dr. Michael A. Vanderhauzner, MD|false
+
+Command
+
+SELECT patients.name, doctors.name FROM patients JOIN doctors ON patients.doctor_id = doctors.doctor_id;
+
+Output
+
+Benjamin, Andre|Dr. Vivica A. Fox, MD
+Montana, Tony|Dr. Michael A. Vanderhauzner, MD
+Walters, Barbara|Dr. Michael A. Vanderhauzner, MD
+Borne, Jason|Dr. Michael A. Vanderhauzner, MD
+Lopez, Jennifer|Dr. Vivica A. Fox, MD
+Tiller, Bryson|Dr. Vivica A. Fox, MD
+Payne, Max|Dr. William H. Bonnahue, MD
+Diaz, Cameron|Dr. William H. Bonnahue, MD
+Rich, Richie|Dr. William H. Bonnahue, MD
+Bonds, Barry|Dr. Michael A. Vanderhauzner, MD
+
+Command
+
+DELETE FROM patients WHERE date_of_birth='1984-01-06';
+
+Output
+
+1|Benjamin, Andre|1986-10-22|3
+2|Montana, Tony|1954-02-17|2
+3|Walters, Barbara|1942-08-30|2
+4|Borne, Jason|1972-11-27|2
+5|Lopez, Jennifer|1970-4-2|3
+6|Tiller, Bryson|1991-07-02|3
+7|Payne, Max|1949-08-09|1
+8|Diaz, Cameron|1972-05-19|1
+10|Bonds, Barry|1971-09-10|2
+
+
