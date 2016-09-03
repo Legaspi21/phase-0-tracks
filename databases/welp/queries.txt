@@ -1,19 +1,44 @@
 Command
 
-
+SELECT users.First_Name, users.Last_Name, businesses.Name, reviews.users_id, reviews.stars, reviews.comment FROM users LEFT JOIN businesses ON users.user_id = businesses.business_id LEFT JOIN reviews ON businesses.business_id = reviews.id;
 
 Output
 
+First_Name  Last_Name   Name                          users_id    stars       comment
+----------  ----------  ----------------------------  ----------  ----------  ------------------
+Bradford    Pitt        Grundy Hollow Wedding Chapel  2           5           Really good sushi!
+Mandy       Kaling      Amir's Towing                 2           2           EHH sushi not so g
+Angela      Jolie       The Beagle Nightclub          4           2           Namaste
+Steven      Wonder      Lotus Yoga
+Holly       Berry       Plumbing by Janet
+Merryl      Streepman   Sushi World
+Denzel      George      JoeBob's Sportz Barn
+
+Command
+
+SELECT users.First_Name, users.Last_Name, businesses.Name, reviews.stars, reviews.comment FROM reviews LEFT JOIN businesses ON reviews.businesses_id = businesses.business_id LEFT JOIN users ON users.user_id = reviews.users_id;
+
+Output
+
+First_Name  Last_Name   Name         stars       comment
+----------  ----------  -----------  ----------  ------------------
+Mandy       Kaling      Sushi World  5           Really good sushi!
+Mandy       Kaling      Sushi World  2           EHH sushi not so g
+Steven      Wonder      Lotus Yoga   2           Namaste
 
 
 
 Command
 
-Output
-
-
-
-
-Command
+SELECT users.First_Name, users.Last_Name, businesses.name, reviews.comment, reviews.stars FROM businesses, users, reviews WHERE reviews.users_id = users.user_id AND reviews.businesses_id = businesses.business_id AND businesses.Name = "Sushi World";
 
 Output
+
+First_Name  Last_Name   Name         comment             stars
+----------  ----------  -----------  ------------------  ----------
+Mandy       Kaling      Sushi World  Really good sushi!  5
+Mandy       Kaling      Sushi World  EHH sushi not so g  2
+
+
+
+
