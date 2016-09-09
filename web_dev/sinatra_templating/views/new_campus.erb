@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Campus</title>
+</head>
+<body>
+<h1>Create a new campus</h1>
+<form action="/campus" method="POST">
+    <input type="text" name="campus" placeholder="Campus">
+    <button type="submit">Save</button>
+  </form>
+
+  <ul>
+	<li><%=@campus_list%></li>
+</ul>
+</body>
+</html>
